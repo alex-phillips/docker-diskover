@@ -9,6 +9,7 @@ LABEL maintainer="alex-phillips"
 RUN \
  echo "**** install build packages ****" && \
  apk add --no-cache \
+ 	curl \
 	grep \
 	logrotate \
 	ncurses \
@@ -21,7 +22,6 @@ RUN \
 	php7-session \
 	python3 && \
  apk add --no-cache --virtual=build-dependencies \
- 	curl \
 	gcc \
 	musl-dev \
 	python3-dev \
